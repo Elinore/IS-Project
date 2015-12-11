@@ -1,10 +1,10 @@
 
 public class test {
-	private int a;
+
+	private int b;
 	
 	public test(int a) {
 		this.a = a;
 	}
-	hej
-	
+
 }

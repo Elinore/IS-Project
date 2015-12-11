@@ -5,5 +5,6 @@ public class test {
 	public test(int a) {
 		this.a = a;
 	}
+	hej
 	
 }

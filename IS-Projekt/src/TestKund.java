@@ -39,5 +39,13 @@ public class TestKund {
 		for (Order order : k.getOrder()) {
 			System.out.println(order.getOrderNbr());
 		}
+		
+		Kommunikation co = new Kommunikation();
+		co.setAdministrator("Eva");
+		co.setComment("Comment");
+		co.setDate("123015");
+		k.addKommunikation(co);
+		
+		k.printList();
 	}
 }

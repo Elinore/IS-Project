@@ -10,7 +10,13 @@ public class Kund {
 	private String telNr;
 	private String agreement;
 	private ArrayList <Order> order = new ArrayList<Order>();
+	private ArrayList <Kommunikation> communicationList = new ArrayList<Kommunikation>();
 	
+	public void printList() {
+		for (int i = 0; i < communicationList.size(); i++) {
+			System.out.println("Handläggare: " + communicationList.get(i).getAdministrator() + " Kommentarer: " + communicationList.get(i).getComment() + " Handläggningsdatum: " + communicationList.get(i).getDate());
+		}
+	}
 	public String getOrgNr() {
 		return orgNr;
 	}
@@ -94,5 +100,13 @@ public class Kund {
 			}
 		}
 		return null;
+	}
+	
+	public void addKommunikation(Kommunikation com) {
+		this.getKommunikation().add(com);
+	}
+	
+	public ArrayList<Kommunikation> getKommunikation() {
+		return this.communicationList;
 	}
 }

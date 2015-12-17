@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Order {
 	private String orderNbr;
@@ -7,7 +8,8 @@ public class Order {
 	private double totalPrice;
 	private String client;
 	private String orderStatus;
-
+	private ArrayList<Orderrad> orderList = new ArrayList<Orderrad>();
+	
 	public String getOrderNbr() {
 		return orderNbr;
 	}
@@ -62,5 +64,14 @@ public class Order {
 
 	public void setOrderStatus(String orderStatus) {
 		this.orderStatus = orderStatus;
+	}
+	
+	public ArrayList<Orderrad> getOrderList() {
+		return this.orderList;
+	}
+	
+	public void addOrderrad(Orderrad ord) {
+		this.getOrderList().add(ord);
+		totalPrice += ord.getPrice();
 	}
 }

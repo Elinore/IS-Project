@@ -1,6 +1,7 @@
 
 
 public class TestKund {
+	
 	public static void main(String[] args) {
 		Kund k = new Kund();
 		k.setOrgNr("123");
@@ -47,5 +48,16 @@ public class TestKund {
 		k.addKommunikation(co);
 		
 		k.printList();
+		
+		Orderrad ord = new Orderrad();
+		ord.setQuantity(2);
+		ord.setPrice(0);
+		
+		Produkt p = new Produkt();
+		p.setProductName("Korv");
+		p.setPrice(300);
+		ord.addProduktList(p);
+		
+		ord.printList();
 	}
 }
